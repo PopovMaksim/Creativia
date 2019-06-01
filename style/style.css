@@ -79,4 +79,28 @@ a {
 .nav a {
 	color: #99999a;
 	padding: 1em;
+	position: relative;
+	
+}
+.nav a::before,
+.nav a::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	width: 0;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+.nav a::before {
+	top: -8px;
+	border-top: 3px solid #ff0036;
+}
+.nav a::after {
+	bottom: -8px;
+	border-bottom: 3px solid #ff0036;
+}
+.nav a:hover::before,
+.nav a:hover::after {
+	width: 30%;
+	left: 35%;
 }
