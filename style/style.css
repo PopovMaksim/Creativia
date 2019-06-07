@@ -23,13 +23,14 @@ a {
 }
 #logo {
 	color: #fff;
-	width: 270px;
+	min-width: 270px;
 	height: 2.5em;
 	box-sizing: border-box;
 	border-left: 2px solid #ff0036;
 	border-right: 2px solid #ff0036;
 	position: relative;
 	background-color: #131313;
+	z-index: 1;
 }
 #logo::before {
 	content: "";
@@ -42,20 +43,19 @@ a {
 	border-top: 4.5em solid #ff0036;
 	border-right: 50px solid transparent;
 	border-left: 50px solid transparent;
-	z-index: 0;
+	z-index: 1;
 }
 #logo::after {
 	content: "";
-	width: 266px;
+	width: 265px;
 	display: block;
-	margin: 0 auto;
 	box-sizing: border-box;
 	border-top: 4.35em solid #131313;
-	border-right: 50px solid transparent;
-	border-left: 50px solid transparent;
+	border-right: 49px solid transparent;
+	border-left: 49px solid transparent;
 	position: absolute;
 	top: 100%;
-	z-index: 1;
+	z-index: 2;
 }
 #logo span {
 	font-family: 'Baloo Da', cursive;
@@ -66,24 +66,25 @@ a {
 	text-align: center;
 	position: relative;
 	top: 1em;
-	z-index: 2;
+	z-index: 3;
 }
-.nav {
+#nav {
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 1.125em;
 	padding: 0;
 	list-style-type: none;
 	text-transform: uppercase;
 	align-self: center;
 }
-.nav a {
+#nav a {
 	color: #99999a;
-	padding: 1em;
+	padding: 0.8em;
 	position: relative;
 	
 }
-.nav a::before,
-.nav a::after {
+#nav a::before,
+#nav a::after {
 	content: "";
 	position: absolute;
 	left: 50%;
@@ -91,16 +92,83 @@ a {
 	box-sizing: border-box;
 	transition: 0.3s;
 }
-.nav a::before {
+#nav a::before {
 	top: -8px;
 	border-top: 3px solid #ff0036;
 }
-.nav a::after {
+#nav a::after {
 	bottom: -8px;
 	border-bottom: 3px solid #ff0036;
 }
-.nav a:hover::before,
-.nav a:hover::after {
+#nav a:hover::before,
+#nav a:hover::after {
 	width: 30%;
 	left: 35%;
 }
+#menu {
+	position: relative;
+	width: 35px;
+	padding: 2em;
+	cursor: pointer;
+}
+#menu span {
+	display: inline-block;
+	width: 35px;
+	height: 0.3em;
+	background-color: #fff;
+	position: absolute;
+	top: 40%;
+}
+#menu span::before {
+	content: "";
+	width: 45px;
+	height: 0.3em;
+	background-color: #fff;
+	position: absolute;
+	top: -10px;
+	right: 0;
+}
+#menu span::after {
+	content: "";
+	width: 25px;
+	height: 0.3em;
+	background-color: #fff;
+	position: absolute;
+	bottom: -10px;
+	right: 0;
+}
+
+@media screen and (max-width: 1185px) {
+	#nav {
+		flex-direction: column;
+		align-self: flex-start;
+		background: linear-gradient(0deg, rgba(7, 6, 11, 0.8), rgb(7, 6, 11));
+		position: absolute;
+		right: 5%;
+		width: 90%;
+		top: -55%;
+		transition: 1s;
+	}
+	#nav li a {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 1em 0;
+	}
+	#nav a::before {
+		top: 0;
+	}
+	#nav a::after {
+		bottom: 0;
+	}
+	.my-class {
+		width: 500px !important;
+	}
+	.menu-open {
+		top: 50px !important;
+	}
+	
+}
+
+/*-----------------------------   HEADER   -----------------------------*/
+
