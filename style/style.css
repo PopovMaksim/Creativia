@@ -93,11 +93,11 @@ a {
 	transition: 0.3s;
 }
 #nav a::before {
-	top: -8px;
+	top: -11px;
 	border-top: 3px solid #ff0036;
 }
 #nav a::after {
-	bottom: -8px;
+	bottom: -11px;
 	border-bottom: 3px solid #ff0036;
 }
 #nav a:hover::before,
@@ -110,6 +110,7 @@ a {
 	width: 35px;
 	padding: 2em;
 	cursor: pointer;
+	display: none;
 }
 #menu span {
 	display: inline-block;
@@ -118,6 +119,7 @@ a {
 	background-color: #fff;
 	position: absolute;
 	top: 40%;
+	transition: 0.3s;
 }
 #menu span::before {
 	content: "";
@@ -127,6 +129,7 @@ a {
 	position: absolute;
 	top: -10px;
 	right: 0;
+	transition: 0.3s;
 }
 #menu span::after {
 	content: "";
@@ -135,7 +138,8 @@ a {
 	background-color: #fff;
 	position: absolute;
 	bottom: -10px;
-	right: 0;
+	right: 0px;
+	transition: 0.3s;
 }
 
 @media screen and (max-width: 1185px) {
@@ -164,10 +168,26 @@ a {
 	.my-class {
 		width: 500px !important;
 	}
+	#menu {
+		display: block;
+	}
 	.menu-open {
 		top: 50px !important;
 	}
-	
+	#navigation .menu__open span {
+		background-color: #07060b;
+	}
+	#navigation .menu__open span::before {
+		top: 0px;
+		transform: rotate(-45deg);
+		border-radius: 1px;
+	}
+	#navigation .menu__open span::after {
+		width: 45px;
+		bottom: 0px;
+		transform: rotate(45deg);
+		border-radius: 1px;
+	}
 }
 
 /*-----------------------------   HEADER   -----------------------------*/
