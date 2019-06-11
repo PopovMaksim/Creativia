@@ -179,16 +179,28 @@ a {
 	}
 	#navigation .menu__open span::before {
 		top: 0px;
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-o-transform: rotate(-45deg);
 		transform: rotate(-45deg);
+		-moz-border-radius: 1px;
+		-webkit-border-radius: 1px;
 		border-radius: 1px;
 	}
 	#navigation .menu__open span::after {
 		width: 45px;
 		bottom: 0px;
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
 		transform: rotate(45deg);
+		-moz-border-radius: 1px;
+		-webkit-border-radius: 1px;
 		border-radius: 1px;
 	}
 }
 
 /*-----------------------------   HEADER   -----------------------------*/
-
+	
