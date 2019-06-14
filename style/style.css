@@ -223,7 +223,7 @@ h1 {
 #header {
 	height: 45em;
 	text-align: center;
-	background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/slider-bg/img1.png);
+	background-image: url(../images/slider-bg/img1.png);
 	background-position: center 40%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -231,6 +231,7 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	color: #fff;
+	position: relative;
 }
 h1 span {
 	color: #ff0036;
@@ -238,13 +239,34 @@ h1 span {
 #header p {
 	max-width: 1060px;
 }
-header button {
+header .container button {
 	background-color: #131313;
 	text-transform: uppercase;
 	font-size: 1.25em;
 	padding: 1em 2em;
 	margin: 1em;
 }
-header button:hover {
+header .container button:hover {
 	background-color: #ff0036;
+}
+#slide-back,
+#slide-next {
+	position: absolute;
+	top: 0;
+	font-size: 3rem;
+	width: -moz-calc((100vw - 1200px) / 2);
+	width: -webkit-calc((100vw - 1200px) / 2);
+	width: calc((100vw - 1200px) / 2);
+	min-width: 3rem;
+	height: 100%;
+}
+#slide-back:hover,
+#slide-next:hover {
+	color: #ff0036;
+}
+#slide-back {
+	left: 0;
+}
+#slide-next {
+	right: 0;
 }
