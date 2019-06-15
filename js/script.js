@@ -12,18 +12,23 @@ var next = document.getElementById('slide-next');
 var background = document.getElementById('header');
 var i = 1;
 
-back.onclick = function back_slide() {
+function back_slide() {
 	i--;
 	if (i<=0) {
 		i = 3;
 	}
 	background.style.backgroundImage = "url('images/slider-bg/img" + i + ".png')";
 }
-
-next.onclick = function next_slide() {
+function next_slide() {
 	i++;
 	if (i >= 4) {
 		i = 1;
 	}
 	background.style.backgroundImage = "url('images/slider-bg/img" + i + ".png')";
+	console.log(i);
 }
+
+back.onclick = back_slide;
+next.onclick = next_slide;
+
+setInterval (next_slide, 5000);

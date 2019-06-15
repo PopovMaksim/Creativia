@@ -232,6 +232,7 @@ h1 {
 	justify-content: center;
 	color: #fff;
 	position: relative;
+	transition: 1s;
 }
 h1 span {
 	color: #ff0036;
