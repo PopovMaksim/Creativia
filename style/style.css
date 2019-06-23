@@ -294,6 +294,8 @@ header .container button:hover {
 	display: flex;
 }
 .about > section {
+	-ms-flex: 1;
+	-webkit-box-flex: 1;
 	flex: 1;
 }
 .about-info {
@@ -303,7 +305,11 @@ header .container button:hover {
 }
 
 .switch__head {
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
+	-ms-flex-align: center;
+	-webkit-box-align: center;
 	align-items: center;
 	border: 1px solid #e7e7e7;
 	background-color: #f7f7f7;
@@ -316,19 +322,13 @@ header .container button:hover {
 	font-size: 1.5rem;
 	font-weight: 900;
 }
-/*.switch__head__checkbox span {
-	display: inline-block;
-	width: 1em;
-	border: 1px solid #6a6a6a;
-	border-radius: 1em;
-	margin: 0 1em;;
-	text-align: center;
-}*/
 .switch__head__checkbox span::before {
 	content: "+";
 	display: inline-block;
 	width: 1em;
 	border: 1px solid #6a6a6a;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
 	border-radius: 1em;
 	margin: 0 1em;;
 	text-align: center;
@@ -348,16 +348,15 @@ header .container button:hover {
 	height: 0;
 }
 .switch__info {
-	transform: translateY(0);
 	margin: 0;
 	border: 1px solid #e7e7e7;
 	border-top: none;
 	overflow: hidden;
 	transition: 0.5s;	
 }
-/*input[type="radio"] {
+input[type="radio"] {
     display: none;
-}*/
+}
 #hwo-is-cretivia:checked ~ .about-info__switch .switch__info-1,
 #experiences:checked ~ .about-info__switch .switch__info-2,
 #learn-more:checked ~ .about-info__switch .switch__info-3 {
