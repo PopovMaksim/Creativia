@@ -375,3 +375,49 @@ input[type="radio"] {
 	content: "-";
 	border: 1px solid #ff0036;
 }
+
+
+
+
+.line span {
+	display: block;
+	width: 50%;
+	height: 0.0625rem;
+	margin: 10em auto;
+	background-color: #262626;
+	position: relative;
+}
+.line__hexagon {
+	position: relative;
+	display: inline-block;
+	font-size: 1.1875rem;
+	width: 0.6875rem;
+	height: 1.1875rem;
+	background-color: #262626;
+	top: -0.5em;
+	left: -moz-calc(50% - 0.34375rem);
+	left: -webkit-calc(50% - 0.34375rem);
+	left: calc(50% - 0.34375rem);
+}
+.line__hexagon::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 0.5em solid transparent;
+	border-right: 0.375rem solid #262626;
+	border-bottom: 0.5em solid transparent;
+	left: -0.375rem;
+}
+.line__hexagon::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 0.5em solid transparent;
+	border-left: 0.375rem solid #262626;
+	border-bottom: 0.5em solid transparent;
+	right: -0.375rem;
+}
