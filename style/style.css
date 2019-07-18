@@ -469,6 +469,12 @@ input[type="radio"] {
 
 
 
+#outer-product {
+	margin-bottom: 100px;
+}
+.out-pr {
+	display: flex;
+}
 .out-pr__letter {
 	max-width: 370px;
 	margin: 0 auto;
@@ -550,5 +556,29 @@ input[type="radio"] {
 	background-color: #ff0036;
 }
 .out-pr__items1 {
-	
+	flex: 0 0 33%;
+	width: 33%;
+}
+.out-pr ul {
+	padding: 0;
+	margin: 5em 0 0;
+	list-style: none;
+}
+.out-pr ul li a{
+	display: block;
+	border: 1px solid #e7e7e7;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.25rem;
+	font-weight: 500;
+	padding: 0.85em;
+	margin-top: 1.15em;
+	text-transform: uppercase;
+	color: #262626;
+}
+.out-pr__items1 ul li {
+	text-align: right;
+}
+.out-pr ul li a:hover {
+	background-color: #ff0036;
+	color: #fff;
 }
