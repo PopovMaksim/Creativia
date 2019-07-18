@@ -24,6 +24,9 @@ h1, h2 {
 	padding: 1.5em 0 0.5em;
 	text-align: center;
 }
+h1 ~ p, h2 ~ p {
+	text-align: center;
+}
 h1, h2, h3 {
 	font-family: 'Raleway', sans-serif;
 }
@@ -458,4 +461,94 @@ input[type="radio"] {
 }
 .about-resume section:hover .about-resume__icon img {
 	filter: invert(100%);;
+}
+
+
+
+/*-----------------------------   OUTHER PRODUCT   -----------------------------*/
+
+
+
+.out-pr__letter {
+	max-width: 370px;
+	margin: 0 auto;
+	position: relative;
+}
+.out-pr__letter__tablet {
+	width: 370px;
+	height: 384px;
+	background-color: #d8d8d8;
+	border: 1px solid #cecece;
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+	position: relative;
+}
+.out-pr__letter__tablet::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-bottom: 90px solid #484848;
+	border-left: 50px solid transparent; /*14%*/
+	position: absolute;
+	bottom: -1px;
+	left: -50px;
+}
+.out-pr__letter__tablet::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-bottom: 90px solid #484848;
+	border-right: 50px solid transparent; /*14%*/
+	position: absolute;
+	bottom: -1px;
+	right: -50px;
+}
+.out-pr__letter__content {
+	position: absolute;
+	width: 328px;
+	top: 51px;
+	right: 20px;
+	border: 2px solid #000;
+	border-radius: 3px;
+}
+.out-pr__letter__envelope {
+	position: relative;
+	width: 230px;
+	height: 205px;
+	background-color: #262626;
+	margin: 0 auto;
+	text-align: center;
+}
+.out-pr__letter__envelope::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 205px solid #262626;
+	border-left: 120px solid transparent;
+	position: absolute;
+	left: -120px;
+}
+.out-pr__letter__envelope::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 205px solid #262626;
+	border-right: 120px solid transparent;
+	position: absolute;
+	right: -120px;
+}
+.out-pr__letter__envelope__btn {
+	display: inline-block;
+	color: #fff;
+	font-size: 1.25rem;
+	padding: 0.8em 2em;
+	background-color: #393939;
+	margin-top: 82px;
+	transition: .3s;
+}
+.out-pr__letter__envelope__btn:hover {
+	background-color: #ff0036;
+}
+.out-pr__items1 {
+	
 }
